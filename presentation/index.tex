@@ -1,13 +1,61 @@
 \documentclass{beamer}
-\usetheme{metropolis} % Use metropolis theme
-\title{A minimal example}
+%\documentclass[notes=only]{beamer}   % only notes
+\usetheme[progressbar=foot]{metropolis}
+
+% IMPORTS
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{parskip} 	% Absätze ohne Einrückungen
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}	% Einbinden von Grafiken
+\usepackage{float}		% figure: [H]
+\usepackage{wrapfig}	% figure: [l]
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{url}
+\usepackage{hyperref}
+
+% Custom colors
+\usepackage{xcolor}
+\definecolor{deepblue}{RGB}{46,206,227}
+\definecolor{deepred}{RGB}{245,20,66}
+\definecolor{deepgreen}{RGB}{98,213,51}
+\definecolor{deepgrey}{RGB}{183,183,183}
+\definecolor{deepyellow}{RGB}{222,203,80}
+\definecolor{commentgreen}{RGB}{78,139,70}
+
+\usepackage{listings}
+
+\lstset{ 
+language=Python,
+basicstyle=\ttfamily,
+otherkeywords={self},                   % Add keywords here
+keywordstyle=\ttfamily\color{deepblue},
+emph={MyClass,__init__},                % Custom highlighting
+emphstyle=\ttfamily\color{deepred},     % Custom highlighting style
+stringstyle=\color{deepyellow},
+commentstyle=\color{commentgreen},      % comment style
+frame=tb,                               % Any extra options here
+tabsize=2,
+showstringspaces=false 
+}
+
+\title{Grundkurs: Programmieren}
+\subtitle{Einführung in grundlegende Programmierkonzepte mit Python}
 \date{\today}
-\author{Matthias Vogelgesang}
-\institute{Centre for Modern Beamer Themes}
+\author{Christoph Sonntag}
+\institute{Universität Passau}
+\subject{Computer Science}
+
 \begin{document}
 \maketitle
-\section{First Section}
-\begin{frame}{First Frame}
-Hello, world!
-\end{frame}
+
+\note[itemize]{
+    \item kleine Vorstellung, wer ich bin, was ich mache (Name, Studium, Selbstständigkeit)
+    \item Heute nur bis 18:00 Uhr, morgen um 10:00 Uhr, wann Mittagspause? Wie lange?
+}
+
+\include{sections/00-intro}
+
 \end{document}
