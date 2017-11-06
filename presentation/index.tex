@@ -4,10 +4,7 @@
 
 % IMPORTS
 \usepackage[ngerman]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage{parskip} 	% Absätze ohne Einrückungen
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}	% Einbinden von Grafiken
 \usepackage{float}		% figure: [H]
 \usepackage{wrapfig}	% figure: [l]
@@ -36,7 +33,7 @@ emph={MyClass,__init__},                % Custom highlighting
 emphstyle=\ttfamily\color{deepred},     % Custom highlighting style
 stringstyle=\color{deepyellow},
 commentstyle=\color{commentgreen},      % comment style
-frame=tb,                               % Any extra options here
+frame=trbl,                             % Any extra options here
 tabsize=2,
 showstringspaces=false 
 }
@@ -57,5 +54,6 @@ showstringspaces=false
 }
 
 \include{sections/00-intro}
+\include{sections/01-setup}
 
 \end{document}
