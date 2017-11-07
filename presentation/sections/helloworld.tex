@@ -1,0 +1,50 @@
+\begin{frame}[fragile]{Hello World}
+    \begin{lstlisting}
+    print("Hello World!")
+    \end{lstlisting}
+    \begin{itemize}
+        \item IDLE suchen und starten
+        \item eintippen und mit Enter ausführen
+        \item gibt den Text (String) `Hello World!' auf der Konsole aus
+    \end{itemize}
+    \begin{exampleblock}{Glückwunsch}
+    Ihr habt gerade euer erstes Code-Fragment geschrieben und ausgeführt!
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Zeichnen mit \texttt{turtle}}
+    \begin{lstlisting}
+import turtle
+
+turtle.shape("turtle") # str bzw. String
+turtle.forward(100) # int bzw. Integer
+turtle.left(45)
+turtle.forward(100)
+    \end{lstlisting}
+    \begin{itemize}
+        \item bei jedem Befehl wird eine Funktion aufgerufen
+        \item \texttt{turtle} nimmt Befehle entgegen (forward, left, right) mit sog. 
+        Eingangsparametern (die wiederum von einem bestimmten Typ sind)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Zeichnen mit \texttt{turtle}}
+    \begin{block}{Aufgabe 1}
+        Schreibe ein Programm, dass ein Quadrat der Seitenlänge 100 zeichnet.
+    \end{block}
+    \pause{}
+    \begin{exampleblock}{Lösung}
+        \begin{lstlisting}
+import turtle
+
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+        \end{lstlisting}
+    \end{exampleblock}
+\end{frame}
+
