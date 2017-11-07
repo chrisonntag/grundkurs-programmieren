@@ -2,6 +2,8 @@
 %\documentclass[notes=only]{beamer}   % only notes
 \usetheme[progressbar=foot]{metropolis}
 
+\setbeamertemplate{frame footer}{\tiny{\inserttitle \textbar \insertauthor \textbar \insertdate}}
+
 % IMPORTS
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
@@ -12,6 +14,7 @@
 \usepackage{caption}
 \usepackage{url}
 \usepackage{hyperref}
+\usepackage{hepnames}
 
 % Custom colors
 \usepackage{xcolor}
@@ -26,7 +29,7 @@
 
 \lstset{ 
 language=Python,
-basicstyle=\ttfamily,
+basicstyle=\fontsize{9}{9}\ttfamily,
 otherkeywords={self},                   % Add keywords here
 keywordstyle=\ttfamily\color{deepblue},
 emph={MyClass,__init__},                % Custom highlighting
@@ -35,25 +38,37 @@ stringstyle=\color{deepyellow},
 commentstyle=\color{commentgreen},      % comment style
 frame=trbl,                             % Any extra options here
 tabsize=2,
-showstringspaces=false 
+showstringspaces=false,
+breaklines=true,
+numbers=left
 }
 
 \title{Grundkurs: Programmieren}
 \subtitle{Einführung in grundlegende Programmierkonzepte mit Python}
-\date{\today}
-\author{Christoph Sonntag}
+\date{WS 17/18}
+\author[CS]{Christoph Sonntag}
 \institute{Universität Passau}
 \subject{Computer Science}
 
 \begin{document}
 \maketitle
 
-\note[itemize]{
-    \item kleine Vorstellung, wer ich bin, was ich mache (Name, Studium, Selbstständigkeit)
-    \item Heute nur bis 18:00 Uhr, morgen um 10:00 Uhr, wann Mittagspause? Wie lange?
-}
-
-\include{sections/00-intro}
-\include{sections/01-setup}
+\include{sections/intro}
+\include{sections/setup-python}
+\include{sections/helloworld}
+\include{sections/types-and-vars}
+\include{sections/setup-idle}
+\include{sections/comments-and-readability}
+\include{sections/for-loop}
+\include{sections/syntax}
+\include{sections/functions}
+\include{sections/functions-with-params}
+\include{sections/if-clauses}
+\include{sections/while-loop}
+\include{sections/datastructures}
+\include{sections/oop}
+\include{sections/program-structure}
+\include{sections/projects-dimensions}
+\include{sections/software-engineering}
 
 \end{document}
