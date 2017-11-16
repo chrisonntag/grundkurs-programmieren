@@ -1,0 +1,103 @@
+\begin{frame}[fragile]{Typen und Variablen}
+Wir haben ganz unbewusst bereits zwei Datentpen benutzt
+\begin{itemize}
+    \item \texttt{String, str}: 
+    \begin{lstlisting}
+print("Ich bin vom Typ String, eine Reihe von Zeichen")
+    \end{lstlisting}
+    \item \texttt{Integer, int}: 
+    \begin{lstlisting}
+sleep(3)   # 3 ist ein Integer
+    \end{lstlisting}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Typen und Variablen}
+\begin{itemize}
+    \item Wahrheitswert (Boolean, bool): 
+    \begin{lstlisting}
+wahr = True
+falsch = False
+    \end{lstlisting}
+    \item Gleitkommazahlen (Float, float):
+    \begin{lstlisting}
+pi = 3.1415
+    \end{lstlisting}
+    \item In Python gibt es sogar komplexe Zahlen \texttt{complex}:
+    \begin{lstlisting}
+a = complex('3+5j')
+    \end{lstlisting}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Typen und Variablen}
+\begin{itemize}
+    \item Zuweisung von Variablen mit dem Zuweisungsoperator \texttt{=}
+    \begin{lstlisting}
+a = 5
+b = 3.14
+c = "Hallo Grundkurs:Programmieren"
+    \end{lstlisting}
+    \item mehrfache Zuweisung 
+    \begin{lstlisting}
+a, b, c = 5, 3.14, "Hallo Grundkurs:Programmieren"
+x = y = z = 42
+    \end{lstlisting}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Typsicherheit}
+ \begin{itemize}
+    \item streng-getypte Sprachen: \textbf{Java}, C/C++, \dots
+    \begin{lstlisting}
+int x = 42
+float pi = 3.14
+String greeting = "Hallo Grundkurs:Programmieren"
+boolean truth = true
+    \end{lstlisting}
+    \item dynamisch (schwach) getypte Sprachen: \textbf{Python}, Javascript
+    \begin{lstlisting}
+x = 42
+pi = 3.14
+greeting = "Hey there"
+truth = True
+    \end{lstlisting}
+\end{itemize}   
+\end{frame}
+
+\begin{frame}[fragile]{Typsicherheit}
+\begin{block}{Aufgabe}
+Gib folgende Ausdrücke in den Python Interpreter ein:
+\begin{lstlisting}
+>>> 3 + 3.14
+>>> "Mein Alter: " + 5
+>>> True + 1
+\end{lstlisting}
+\end{block}
+\pause{}
+\begin{exampleblock}{True + 1 == 2?}
+Intern werden die Keywords \lstinline{True} und \lstinline{False} auf die 
+Werte \texttt{1} und \texttt{0} vom Typ \texttt{int} abgebildet.
+\end{exampleblock}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Typen und Variablen}
+    Die \lstinline{input()} Funktion nimmt Benutzereingaben auf der Kommandozeile 
+    entgegen und gibt sie zurück. Du brauchst kein zusätzliches Modul importieren.
+    \begin{block}{Aufgabe}
+       Lasse dich von deinem Programm begrüßen, indem du mit \texttt{input} deine 
+       Eingabe in einer Variable speicherst.
+    \end{block}
+    \pause{}
+    \begin{exampleblock}{Lösung}
+        \begin{lstlisting}
+>>> name = input()
+'Christoph'
+>>> print("Hallo " + name)
+        \end{lstlisting}
+    \end{exampleblock}
+\end{frame}
