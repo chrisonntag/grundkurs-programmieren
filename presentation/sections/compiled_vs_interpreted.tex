@@ -1,0 +1,198 @@
+\begin{frame}{Programmiersprachen}
+    \begin{itemize}
+        \item Unterscheidungsmerkmale
+            \begin{itemize}
+                \item Programmierparadigma: imperativ, funktional oder objektorientiert
+                \item Typsicherheit
+                \item kompiliert vs. interpretiert
+                \item allgemein vs. domänenspezifisch
+                \item hardwarenah vs. höhere Programmiersprachen
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Programmiersprachen}
+    \begin{itemize}
+        \item Imperative Programmiersprachen: C/C++, C\#, Java \dots
+        \item Funktionale Programmiersprachen: SQL, Haskell, Erlang, (Scala) \dots
+        \item Objektorientierte Programmiersprachen: C++, C\#, Java, Javascript, PHP, Python \dots
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Imperative Sprachen (C/C++, C\#, Python, Java, \dots)}
+    \begin{itemize}
+        \item ältestes Programmierparadigma
+        \item große Verbreitung in der Industrie
+        \item besteht aus Befehlen (lat. imperare = befehlen)
+        \item Abarbeiten der Befehle `Schritt für Schritt'
+        \item sagt einem Computer, `wie' er etwas tun soll
+    \end{itemize}
+    \begin{lstlisting}
+print("Hey, whats' up?")
+sleep(3)
+print("Learning Python right now")
+sleep(2)
+    \end{lstlisting}
+    \begin{itemize}
+        \item Verwendung
+            \begin{itemize}
+                \item `Standard-Software', hardwarenahe Entwicklung
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Funktionale Sprachen (Haskell, Erlang, SQL, Lisp, \dots)}
+    \begin{itemize}
+       \item vergleichsweise modern
+       \item sagt einem Computer, `was' das Ergebnis sein soll
+       \item SELECT name FROM students WHERE major=‘law’ AND semester=‘1’;
+       \item Verwendung
+        \begin{itemize}
+            \item akademische Zwecke
+            \item sicherheitskritische und \dots
+            \item hoch performante Anwendungen
+        \end{itemize}
+    \end{itemize}
+    \begin{lstlisting}
+square :: [Int] -> [Int]
+square a = [2*x | x <- a]
+    \end{lstlisting}
+\end{frame}
+
+\defverbatim{\impvsfunc}{%
+\begin{lstlisting}[frame=none,numbers=none,basicstyle=\fontsize{15}{18}\ttfamily]
+            x = x + 1
+\end{lstlisting}
+}
+\begin{frame}[standout]
+    \impvsfunc
+\end{frame}
+
+\begin{frame}[fragile]{Objektorientierte Sprachen (Java, Python, C++, C\#, \dots)}
+    \begin{itemize}
+       \item starke Verbreitung
+       \item Abbilden der realen Welt der Dinge auf Objekte
+       \item Klasse: Bauplan eines Objekts bestehend aus Eigenschaften (Attributen) und Methoden
+       \item Vererbung möglich
+       \item Verwendung
+        \begin{itemize}
+            \item Standard-Software
+            \item Modellierung realer Projekte(Unternehmen, Mitarbeiter, Kunden, Waren, \dots)
+            \item große Projekte ($\rightarrow$ Planung durch Klassendiagramme)
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Objektorientierung: Beispiel}
+    \begin{lstlisting}
+class Konto:
+    def __init__(self, name, nr):
+        self.inhaber = name
+        self.kontonummer = nr
+        self.kontostand = 0
+    def einzahlen(self, betrag):
+        self.kontostand = kontostand + betrag
+    def auszahlen(self, betrag):
+        self.kontostand = kontostand - betrag
+    def ueberweisen(self, ziel, betrag): 
+        ziel.einzahlen(self.betrag)
+        self.auszahlen(betrag)
+    def kontostand(self):
+        return self.kontostand
+
+class Unternehmenskonto(Konto):
+    def erhalteBonus(self, bonus):
+        self.kontostand = kontostand + bonus
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Kompilierte und Interpretierte Sprachen}
+    \begin{itemize}
+        \item kompilierte Sprachen (Java, C/C++, C\#, \dots):
+        \begin{itemize}
+            \item Übersetzung des (kompletten) Programmcodes in Maschienencode
+            \item dann Ausführung des Maschinencodes
+        \end{itemize}
+        \item interpretierte Sprachen (Python, Lisp, PHP, JavaScript, \dots):
+        \begin{itemize}
+            \item Übersetzung einer einzelnen Programmanweisung
+            \item Ausführung dieser Anweisung
+            \item Übersetzung der nächsten Anweisung
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Hardwarenahe und höhere Sprachen}
+\begin{itemize}
+    \item hardwarenah: abhängig von der Bauweise des Prozessors
+    \item höhere Sprachen: von der Bauweise abstrahiert (\texttt{print(), sleep()})
+\end{itemize}
+\begin{columns}
+    \column{0.3\textwidth}
+    \begin{lstlisting}
+.START ST
+  ST: MOV R1,#2
+      MOV R2,#1
+  M1: CMP R2,#20
+      BGT M2
+      MUL R1,R2
+      INI R2
+      JMP M1
+  M2: JSR PRINT
+      .END
+    \end{lstlisting}
+    \column{0.3\textwidth}
+    \begin{lstlisting}
+
+a = 2;
+i = 1;
+# compare i == 20
+# if True, jump to M2
+a = a*i;
+i++;
+# jump to M1
+print(a)
+    \end{lstlisting}
+    \column{0.3\textwidth}
+    \begin{lstlisting}
+a = 2;
+for i in range(1, 20) {
+
+
+    a = a*i;
+}
+ 
+ 
+print(a);
+
+    \end{lstlisting}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Populäre Programmiersprachen}
+    \begin{itemize}
+        \item C++
+            \begin{itemize}
+                \item imperativ, objektorientiert, typsicher, kompiliert, allgemein,
+                höhere Sprache (dennoch hardwarenah)
+                \item große Verwendung in hocheffizienten Systemen 
+                (Betriebssysteme, Grafikberechnungen, Computerspiele, \dots)
+                \item Erweiterung von C mit Objektorientierung
+            \end{itemize}
+        \item Java
+            \begin{itemize}
+                \item imperativ, objektorientiert, typsicher, kompiliert, allgemein
+                \item im bayrischen Lehrplan und an vielen Universitäten 
+                `erste' Sprache
+                \item ebenfalls große Verbreitung
+            \end{itemize}
+        \item Python
+            \begin{itemize}
+                \item (imperativ), (funktional), objektorientiert, 
+                dynamisch getypt, interpretiert, allgemein
+                \item große Verbreitung auch gerade im akademischen Umfeld, 
+                Web, Machine Learning und Data Science
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+

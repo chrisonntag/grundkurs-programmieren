@@ -12,39 +12,50 @@
     \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]{Zeichnen mit \texttt{turtle}}
-    \begin{lstlisting}
-import turtle
-
-turtle.shape("turtle") # str bzw. String
-turtle.forward(100) # int bzw. Integer
-turtle.left(45)
-turtle.forward(100)
-    \end{lstlisting}
-    \begin{itemize}
-        \item bei jedem Befehl wird eine Funktion aufgerufen
-        \item \texttt{turtle} nimmt Befehle entgegen (forward, left, right) mit sog. 
-        Eingangsparametern (die wiederum von einem bestimmten Typ sind)
-    \end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{Zeichnen mit \texttt{turtle}}
+\begin{frame}[fragile]{Hello World}
     \begin{block}{Aufgabe 1}
-        Schreibe ein Programm, dass ein Quadrat der Seitenlänge 100 zeichnet.
+        Erweitere das Programm so, dass der \texttt{String} `Hello World'
+        6-mal auf der Konsole ausgegeben wird.
     \end{block}
     \pause{}
     \begin{exampleblock}{Lösung}
         \begin{lstlisting}
-import turtle
-
-turtle.forward(100)
-turtle.left(90)
-turtle.forward(100)
-turtle.left(90)
-turtle.forward(100)
-turtle.left(90)
-turtle.forward(100)
+print("Hello World")
+print("Hello World")
+print("Hello World")
+print("Hello World")
+print("Hello World")
+print("Hello World")
         \end{lstlisting}
     \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Hello World}
+    \begin{itemize}
+        \item \texttt{sleep(num)}
+            \begin{itemize}
+                \item stoppt die Ausführung des Programms für \texttt{num} Sekunden
+                \item ist nicht Teil des Standard-Pythons, sondern muss importiert 
+                    werden. \lstinline[columns=fixed]{from time import sleep}
+            \end{itemize}
+    \end{itemize}
+    \pause{}
+    \begin{block}{Aufgabe 2}
+        Lass das Programm einen realistischen Monolog ausführen. 
+        Verwende hierzu \texttt{sleep}
+    \end{block}
+    \pause{}
+    \begin{exampleblock}{Lösung}
+        \begin{lstlisting}
+from time import sleep
+
+print("Hey, it's James!")
+sleep(2)
+print("I'm working on a ChatBot right now")
+sleep(3)
+...
+        \end{lstlisting}
+    \end{exampleblock}
+
 \end{frame}
 
