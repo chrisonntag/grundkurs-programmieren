@@ -1,0 +1,106 @@
+\begin{frame}[fragile]{Die \texttt{while}-Schleife}
+Ähnlich zur \texttt{for}-Schleife mit dem Unterschied, dass nicht `durch eine Liste gelaufen' wird, 
+sondern die Schleife immer wiederholt wird, solange die Bedingung wahr ist.
+
+    \begin{lstlisting}
+while Bedingung:
+    # Programmcode
+
+# ausserhalb der Schleife
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Die \texttt{while}-Schleife}
+\begin{block}{Aufgabe}
+Schreibe ein Programm, welches alle Zahlen von 1 bis 100 auf den Bildschirm schreibt, ohne dafür eine 
+for Schleife zu verwenden.
+\end{block}
+
+\begin{block}{Aufgabe}
+Die Folge aus Fibonacci-Zahlen wird wie folgt gebildet:
+\begin{itemize}
+    \item Das erste und das zweite Element sind 0 und 1.
+    \item Jedes folgende Element wird gebildet, in dem die letzten zwei Elemente addiert werden.
+\end{itemize}
+Das heisst, die Folge sieht so aus: 0,1,1,2,3,5,8,13,21,34,\dots
+
+Schreibe ein Programm, welches die Fibonacci-Zahlen bis zu einer vom Benutzer gewählten Zahl ausgibt.
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{while-Schleife}
+\begin{exampleblock}{Lösung 1}
+\begin{lstlisting}
+num = 10
+# num = int(input("Bis zu welcher Zahl? "))
+fib1 = 0
+fib2 = 1
+count = 0
+
+if num <= 0:
+   print("Bitte eine positive Zahl eingeben")
+elif num == 1:
+   print("Fibonacci bis zur " + num + "ten Zahl:")
+   print(fib1)
+else:
+    print("Fibonacci bis zur " + num + "ten Zahl:")
+    while count < num:
+	    print(fib1)
+	    fibn = fib1 + fib2
+	    fib1 = fib2
+	    fib2 = fibn
+	    count = count + 1
+        # count += 1
+\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{while-Schleife}
+\begin{exampleblock}{Lösung 2}
+\begin{lstlisting}
+def fibonacci(n):
+    a = 0
+    b = 1
+    for i in range(0, n):
+        temp = a
+        a = b
+        b = temp + b
+    return a
+\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Die \texttt{while}-Schleife}
+\begin{block}{Aufgabe: Das kleine 1$\times$1}
+Schreibe ein Programm, das den Benutzer `zufällige' 1$\times$1 Rechenaufgaben abfragt und 
+die Lösung überprüft. (\lstinline{from random import randint}). Nach jeder Rechenaufgabe 
+soll der Benutzer gefragt werden, ob noch eine Aufgabe gestellt werden soll.
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Die \texttt{while}-Schleife}
+\begin{exampleblock}{Lösung}
+\begin{lstlisting}
+from random import randint
+
+print("Herzlich willkommen zum kleinen EinmalEins Rechner!")
+weiter = "Ja"
+
+while weiter == "Ja":
+    zahl1 = randint(1, 9)
+    zahl2 = randint(1, 9)
+    print(str(zahl1) + " x " + str(zahl2))
+
+    loesung = int(input("= "))
+    if loesung == zahl1 * zahl2:
+        print("Korrekt! Glueckwunsch")
+    else:
+        print("Leider nicht ganz korrekt. Richtig waere: " + str(zahl1 * zahl2))
+    weiter = input("Weiter? (Ja/Nein): ")
+
+print("Vielen Dank!")
+\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+

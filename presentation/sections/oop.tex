@@ -1,0 +1,45 @@
+\begin{frame}[fragile]{Objektorientierung}
+Je größer ein Projekt wird, desto wichtiger ist es, den Überblick 
+zu behalten. Funktionen sind eine Art, das Programm übersichtlich zu halten.
+Objektorientierung eine weitere.
+\pause{}
+
+\begin{lstlisting}
+# einfachste Art einer Klasse
+class Person:
+    pass
+
+james = Person()
+
+james.name = "James"
+james.alter = 42
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Objektorientierung, die \lstinline{\_\_init\_\_()} methode}
+
+\begin{lstlisting}
+class Person():
+
+    def __init__(self):
+        self.name = "James"
+        self.alter = 42
+
+    def alter_plus_10(self):
+        return self.alter + 10
+
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]{Objektorientierung}
+\begin{block}{Aufgabe}
+\begin{itemize}
+    \item Verpacke das Notenprogramm in eine eigene Klasse Notenprogramm mit dem Attribut noten, in dem
+    die Noten gespeichert sind.
+    \item Füge die Methode errechne\_durschnitt() hinzu, die den Durchschnitt errechnet
+\end{itemize}
+\end{block}
+\end{frame}
+
+

@@ -1,0 +1,48 @@
+\begin{frame}[fragile]{logische Operatoren}
+Den Zuweisungsoperator \texttt{=} haben wir unbewusst bereits kennengelernt. 
+Er weißt einem Wert bspws.\ einen Namen zu (\lstinline{x = 42}). Die Operatoren 
+\texttt{+}, \texttt{-}, \texttt{/} oder \texttt{*} verwenden wir intuitiv.\\
+
+Zum besseren Vergleichen brauchen wir weitere Operatoren:
+\begin{itemize}
+    \item \texttt{==}: prüft zwei Werte auf Gleichheit
+    \item \texttt{!=}: prüft zwei Werte auf Ungleichheit
+    \item \texttt{>}: größer
+    \item \texttt{<}: kleiner (vgl.\ for-Schleife)
+    \item kleiner-gleich?
+    \pause{}
+    \item \texttt{<=, >=}, kleiner-gleich, größer-gleich
+    \item \texttt{and}: logisches `Und'
+    \item \texttt{or}: logisches `Oder'
+    \item \texttt{not}: verneint einen Ausdruck
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{logische Operatoren}
+Was ergeben folgende Ausdrücke? Überprüfe sie mit dem Python Interpreter.
+
+\begin{lstlisting} 
+3 > 4 
+\end{lstlisting}
+
+\begin{lstlisting} 
+6 != 7
+\end{lstlisting}
+
+\begin{lstlisting} 
+"Hallo" < "Hallo Welt!"
+\end{lstlisting}
+
+\begin{lstlisting} 
+"Hallo" == "Hallo Welt"
+\end{lstlisting}
+
+\begin{lstlisting} 
+"Hallo Welt" == "Hallo" and 3 > 4
+\end{lstlisting}
+
+\begin{lstlisting} 
+not not 5 == 5
+\end{lstlisting}
+
+\end{frame}

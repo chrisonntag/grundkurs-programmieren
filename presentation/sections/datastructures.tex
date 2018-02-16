@@ -1,0 +1,79 @@
+\begin{frame}[fragile]{Datenstrukturen: Listen}
+Listen sind praktische Datenstrukturen, um eine Folge von Werten zu 
+speichern oder zu erzeugen.
+Oft reichen Integer, Float und String Datentypen nicht aus. Meist wissen wir nämlich im Voraus nicht, 
+wie viele Datensätze gespeichert werden sollen.
+\pause{}
+\begin{lstlisting}
+zahlen = [1, 2, 3, 4, 5, 6]
+texte = ["Hallo", "Welt", ".", ["Grundkurs", "Programmieren"]]
+\end{lstlisting}
+
+\begin{lstlisting}
+>>> zahlen[3]
+4
+>>> texte[0]
+"Hallo"
+>>> texte[3]
+["Grundkurs", "Programmieren"]
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Datenstrukturen: Listen}
+Die Liste bietet eine große Anzahl an Methoden (Funktionen), die auf ihnen
+ausgeführt werden können.
+\begin{block}{Aufgabe}
+\begin{lstlisting}
+>>> liste = ["Grundkurs", "Programmieren", 42, "Pie", 3.14]
+
+>>> liste[2] = 99
+>>> len(liste)
+>>> liste.append("Passau")
+>>> liste.extend([4, 5, 3.14])
+>>> liste.insert(2, "Falke")
+>>> liste.count(3.14)
+>>> liste.index(3.14)
+>>> liste.remove(3.14)
+>>> liste.pop()
+>>> liste.reverse()
+>>> sum([1,3,5])
+>>> max([1,3,5])
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Datenstrukturen: Listen}
+\begin{block}{Aufgabe}
+Versuche zu erraten, was die Ausgabe dieses Programms ist.
+\end{block}
+
+\begin{lstlisting}
+liste_a = ['Hallo', 'schoenes', 'Wetter']
+liste_b = liste_a
+
+liste_b[1] = 'schlechtes'
+
+print(liste_a[0], liste_a[1], liste_a[2])  
+\end{lstlisting}
+\pause{}
+\begin{exampleblock}{Lösung}
+    \texttt{Hallo schlechtes Wetter}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Datenstrukturen: Listen}
+\begin{block}{Aufgabe: Notendurchschnitt}
+Schreibe ein Programm, dass beliebig oft Prüfungs-Noten einliest, in einer
+Liste speichert und dir nach jeder Eingabe den Durschnitt errechnet. 
+\textit{Hinweis:} Verwende eine while True: Schleife, um beliebig oft 
+Noten einzulesen.
+\end{block}
+\begin{lstlisting}
+
+\end{lstlisting}
+\pause{}
+\begin{exampleblock}{Lösung}
+siehe Beamer
+\end{exampleblock}
+\end{frame}
+

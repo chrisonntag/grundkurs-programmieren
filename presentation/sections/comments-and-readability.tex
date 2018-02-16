@@ -1,0 +1,53 @@
+\begin{frame}[fragile]{Exkurs: Kommentierung, Lesbarkeit und Wartbarkeit}
+    \begin{lstlisting}
+"""
+Das ist ein Kommentar, der sich ueber mehrere Zeilen
+erstreckt und in der Regel in ganzen Saetzen spricht.
+Das Ziel ist etwas ausfuehrlich zu erklaeren.
+"""
+print("Wozu Kommentare?") # stellt eine Frage
+    \end{lstlisting}
+    \begin{itemize}
+        \item Zeilen, die mit '\# ' beginnen, sind einzeilige Kommentare
+        \item mehrzeilige Kommentare häufig bei Klassen ($\rightarrow$ automatische 
+        Erzeugung von Dokumentationen)
+        \item werden nicht ausgeführt
+        \item zur Erläuterung von Programmcode
+        \item Aufwendig, aber sehr wichtig! (Lesbarkeit, Wartbarkeit)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Exkurs: Kommentierung, Lesbarkeit und Wartbarkeit}
+    \begin{lstlisting}
+# set the value of the age to an integer with the value 32
+age = 32
+    \end{lstlisting}
+    \pause{}
+    \begin{alertblock}{Schlechtes Beispiel}
+    Unnötige Erklärung einer offensichtlichen Sache
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Exkurs: Kommentierung, Lesbarkeit und Wartbarkeit}
+    \begin{lstlisting}
+def addSetEntry(set, value) {   
+  """ 
+   Don't return 'set.add' because it's not chainable in Internet Explorer 11.
+  """ 
+  set.add(value)    
+  return set
+}
+    \end{lstlisting}
+    \pause{}
+    \begin{lstlisting}
+"""
+This code sucks, you know it and I know it.  
+Move on and call me an idiot later.
+"""
+    \end{lstlisting}
+    \pause{}
+    \begin{lstlisting}
+# Class used to workaround Richard being a f***ing idiot
+    \end{lstlisting}
+\end{frame}
+

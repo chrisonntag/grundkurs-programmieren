@@ -1,0 +1,80 @@
+\begin{frame}[fragile]{Die \texttt{for}-Schleife}
+\begin{block}{Aufgabe}
+    Schreibe ein Programm, dass von 1 bis 100 zählt.
+    \begin{lstlisting}
+print("Ich kann uebrigens bis 100 zaehlen ... ;-)")
+...
+    \end{lstlisting}
+\end{block}
+\pause{}
+\begin{exampleblock}{Lösungsvariante 1}
+    \begin{lstlisting}
+print(1)
+print(2)
+print(3)
+print(4)
+print(5)
+print(6)
+print(7)
+...
+    \end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Die \texttt{for}-Schleife}
+Vereinfachte weniger schreibintensive Variante:
+\begin{exampleblock}{Lösungsvariante 2}
+    \begin{lstlisting}
+for i in range(1, 100):
+    print(i)
+    \end{lstlisting}
+\end{exampleblock}
+\begin{itemize}
+    \item gibt die Werte von 1 bis 99 aus
+    \pause{} 
+    \item gib in den Interpreter \texttt{help()} ein, um genaueres über 
+    eine Funktion zu erfahren. 
+    \pause{}
+    \item aus der Dokumentation: \texttt{range(i, j) produces i, i+1, i+2, ..., j-1.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Die \texttt{for}-Schleife}
+\begin{itemize}
+    \item Andere Sprachen erzeugen kein 'extra Objekt', sondern zählen eine 
+    Variable hoch
+    \item genauer: setzt $i=1$, addiert in jedem Schritt 1 auf, 
+    solange $i < 100$ ist. 
+\end{itemize}
+\begin{lstlisting}[language=Java]
+for(int i=1, i < 100, i++) {
+    // gib i aus
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Die \texttt{for}-Schleife}
+\begin{block}{Aufgabe}
+Ändere das Programm von gerade eben so, dass wirklich bis 100 gezählt wird.
+\end{block}
+\pause{}
+\begin{exampleblock}{Lösung}
+\begin{lstlisting}
+for in in range(1, 101):
+    print(i)
+\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Die \texttt{for}-Schleife}
+\begin{block}{Aufgabe}
+Bildet 2-3er Gruppen und schreibt ein Programm, dass von 10 bis 0 herunterzählt.
+\textit{Hinweis:} Verwendet zum pausieren zwischen den Zahlen wieder \texttt{sleep()}.
+\lstinline{from time import sleep} nicht vergessen.
+\end{block}
+\pause{}
+\begin{exampleblock}{Lösung}
+    siehe Beamer
+\end{exampleblock}
+\end{frame}
+

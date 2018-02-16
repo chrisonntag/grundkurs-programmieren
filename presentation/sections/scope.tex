@@ -1,0 +1,29 @@
+\begin{frame}[fragile]{Gültigkeit von Variablen - der Scope}
+    \begin{block}{Aufgabe}
+    Schreibe ein Programm, dass sich dem Benutzer vorstellt und anschließend
+    nach Namen und Alter fragt. Verwende hierzu die 
+    Funktionen \lstinline{input()} und \lstinline{print()}. (Wenn du willst auch
+    \lstinline{sleep()}).
+    \end{block}
+
+    \begin{alertblock}{Anfang}
+    \begin{lstlisting}
+name = "James"
+print("Hey, i'm " + name + " and what's you're name?")
+...
+    \end{lstlisting}
+    \end{alertblock}
+
+    \pause{}
+
+    \begin{exampleblock}{mögliche Lösung}
+    \begin{lstlisting}
+...
+name = input() # ueberschreibt die vorige Variable 
+sleep(2)
+print("Ahh, so you're " + name)
+...
+    \end{lstlisting}
+    \end{exampleblock}
+\end{frame}
+

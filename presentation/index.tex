@@ -7,6 +7,7 @@
 % IMPORTS
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
 \usepackage{graphicx}	% Einbinden von Grafiken
 \usepackage{float}		% figure: [H]
 \usepackage{wrapfig}	% figure: [l]
@@ -15,6 +16,14 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{hepnames}
+\usepackage{csquotes}
+\usepackage[style=numeric,backend=biber]{biblatex}
+
+% Set bib file
+\bibliography{literature}
+
+% Removes icon in bibliography
+\setbeamertemplate{bibliography item}{}
 
 % Custom colors
 \usepackage{xcolor}
@@ -34,13 +43,15 @@ otherkeywords={self},                   % Add keywords here
 keywordstyle=\ttfamily\color{deepblue},
 emph={MyClass,__init__},                % Custom highlighting
 emphstyle=\ttfamily\color{deepred},     % Custom highlighting style
-stringstyle=\color{deepyellow},
+stringstyle=\color{deepgreen},
 commentstyle=\color{commentgreen},      % comment style
 frame=trbl,                             % Any extra options here
 tabsize=2,
 showstringspaces=false,
 breaklines=true,
-numbers=left
+numbers=left,
+extendedchars=false,
+escapeinside=”
 }
 
 \title{Grundkurs: Programmieren}
@@ -56,21 +67,47 @@ numbers=left
 \include{sections/intro}
 \include{sections/setup-python}
 \include{sections/helloworld}
-\include{sections/compiled_vs_interpreted}
-\include{sections/types-and-vars}
 \include{sections/setup-idle}
-\include{sections/scope}
+\include{sections/types-and-vars}
+\include{sections/compiled_vs_interpreted}
 \include{sections/comments-and-readability}
-\include{sections/for-loop}
+\include{sections/datastructures}
 \include{sections/syntax}
+\include{sections/for-loop}
+\include{sections/scope}
+\include{sections/logic}
+
+\begin{frame}{Recap}
+    \begin{block}{Aufgabe}
+        Schreibe ein Programm, welches vom Benutzer 6 Zahlen einliest, diese 
+        in einer Liste speichert und anschließend das Maximum ausgibt.
+    \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Recap}
+    \begin{exampleblock}{Lösung}
+        \begin{lstlisting}
+numbers = []
+for i in range(0,7):
+    input_num = int(input())
+    numbers.append(input_num)
+
+maximum = max(numbers)
+print("Maximum: " + str(maximum))
+# print("Maximum: \%d" \% maximum)
+        \end{lstlisting}
+    \end{exampleblock}
+\end{frame}
+
+\include{sections/if-clauses}
+\include{sections/projects-dimensions}
+\include{sections/while-loop}
+% \include{sections/fileio}
 \include{sections/functions}
 \include{sections/functions-with-params}
-\include{sections/if-clauses}
-\include{sections/while-loop}
-\include{sections/datastructures}
-\include{sections/oop}
+% \include{sections/oop}
 \include{sections/program-structure}
-\include{sections/projects-dimensions}
 \include{sections/software-engineering}
+\include{sections/evaluation-literature}
 
 \end{document}
