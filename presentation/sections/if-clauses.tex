@@ -22,32 +22,41 @@ else:
 \begin{frame}[fragile]{Bedingte Ausführung}
     \begin{block}{Aufgabe}
         Schreibe eine Programm, das zwei Zahlen vom Benutzer einliest, testet, 
-        ob die erste durch die zweite Zahl teilbar ist und das Ergebnis ausgibt.
+        ob die erste durch die zweite Zahl teilbar ist und das Ergebnis ausgibt.\\
         \pause{}
+        \textit{Hinweis:}\\
+        Eine Zahl ist durch eine andere teilbar, wenn der Rest bei der Division beider 
+        Zahlen 0 ergibt. Die Modulo-Operation \texttt{a \% b} gibt uns den Rest zweier Zahlen, wenn man 
+        sie teilen würde.
+    \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Bedingte Ausführung}
+    \begin{exampleblock}{Lösung}
         \begin{lstlisting}
 zahl1 = int(input("Erste Zahl: "))
 zahl2 = int(input("Zweite Zahl: "))
 
-if zahl1 ‘%‘ zahl2 == 0:
+if zahl1 % zahl2 == 0:
     print("Zahl 1 ist durch die Zweite teilbar!")
 else: 
     print("Leider kann man die Zahlen nicht ohne Rest teilen")
         \end{lstlisting}
-    \end{block}
+    \end{exampleblock}
 \end{frame}
 
 \begin{frame}[fragile]{Bedingte Ausführung}
 Mehrere Bedingungen?
 \pause{}
 \begin{lstlisting}
-zahl = input()
+zahl = int(input())
 
 if zahl > 10:
     print("Die Zahl ist > 10.")
-elif zahl > 100:
-    print("Die Zahl ist > 100.")
+elif zahl > 5:
+    print("Die Zahl ist > 5.")
 else:
-    print("Die Zahl ist < 10.")
+    print("Die Zahl ist < 5.")
 
 \end{lstlisting}
 \end{frame}
@@ -81,19 +90,38 @@ elif age > 2:
 \end{frame}
 
 
-\begin{frame}{Bedingte Ausführung}
+\begin{frame}{Bedingte Ausführung \hyphen{} Schachteln von \texttt{if}-Abfragen}
     \begin{block}{Aufgabe}
         Schreibe ein Programm, das errechnet, ob ein eingegebenes Jahr ein
-        Schaltjahr ist.
+        Schaltjahr ist, also ob der 29. Februar existiert oder nicht.
         \begin{itemize}
-            \item durch 400 teilbar: ist ein Schaltjahr
-            \item durch 100 teilbar: ist kein Schaltjahr
-            \item falls durch 4 teilbar: ist ein Schaltjahr
+            \item Zusatztag existiert alle 4 Jahre
+            \item alle 100 Jahre wird jedoch darauf verzichtet
+            \item alle 400 Jahre weicht man von der Verzichtregel ab
         \end{itemize}
     \end{block}
     \pause{}
     \begin{exampleblock}{gemeinsame Lösung}
     siehe Beamer
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Bedingte Ausführung \hyphen{} Schachteln von \texttt{if}-Abfragen}
+    \begin{exampleblock}{Lösung}
+        \begin{lstlisting}
+year = int(input())
+
+if (year % 4) == 0:
+   if (year % 100) == 0:
+       if (year % 400) == 0:
+           print("ist ein Schaltjahr")
+       else:
+           print("ist kein Schaltjahr")
+   else:
+       print("ist ein Schaltjahr")
+else:
+   print("ist kein Schaltjahr")
+       \end{lstlisting}
     \end{exampleblock}
 \end{frame}
 

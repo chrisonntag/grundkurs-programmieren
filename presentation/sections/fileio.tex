@@ -1,0 +1,32 @@
+\begin{frame}[fragile]{Dateien lesen und schreiben}
+Um Daten, die unsere Programme ausgeben bzw. benötigen, brauchen wir eine 
+Möglichkeit, diese zu speichern.
+\pause{}
+\begin{lstlisting}
+daten = open("daten.txt", "r")
+for line in daten:
+    print(line.rstrip())
+
+daten.close()
+\end{lstlisting}
+
+\pause{}
+
+\begin{lstlisting}
+zahlen = [1, 2, 3]
+daten = open("daten.txt", "w")
+for zahl in zahlen:
+    daten.write(str(zahl))
+
+daten.close()
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Dateien lesen und schreiben}
+\begin{block}{Aufgabe}
+Baue das Notenprogramm so um, dass die Noten beim Start des Programms aus einer Datei gelesen 
+werden und nach Abschluss der Eingabe wieder dort hinein geschrieben werden.
+\end{block}
+\end{frame}
+
+

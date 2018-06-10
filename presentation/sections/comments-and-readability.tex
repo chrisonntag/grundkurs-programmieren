@@ -30,13 +30,12 @@ age = 32
 
 \begin{frame}[fragile]{Exkurs: Kommentierung, Lesbarkeit und Wartbarkeit}
     \begin{lstlisting}
-def addSetEntry(set, value) {   
+def addSetEntry(set, value):
   """ 
-   Don't return 'set.add' because it's not chainable in Internet Explorer 11.
+   Don't return set.add because it's not chainable in Internet Explorer 11.
   """ 
   set.add(value)    
   return set
-}
     \end{lstlisting}
     \pause{}
     \begin{lstlisting}
